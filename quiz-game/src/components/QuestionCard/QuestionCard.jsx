@@ -1,6 +1,6 @@
 import React from 'react';
 
-function QuestionCard({ question, answers, onAnswerClick }) {
+function QuestionCard({question, answers, onAnswerClick}) {
     return (
         <div>
             <h3>{question}</h3>

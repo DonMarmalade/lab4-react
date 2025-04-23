@@ -1,28 +1,26 @@
-import {Router, Routes, Route} from "@components/navigation";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {MainPage, QuizPage, ScorePage} from "@pages/index.js";
+import {StartProvider} from "@context/StartContext.jsx";
+import {ScoreProvider} from "@context/ScoreContext.jsx";
 
 function App() {
     return (
-        <Router>
-            <Routes>
-                <Route path="/">
-                    <MainPage />
-                </Route>
-                <Route path="/quiz">
-                    <QuizPage />
-                </Route>
-                <Route path="/score">
-                    <ScorePage />
-                </Route>
-            </Routes>
-        </Router>
+        <StartProvider>
+            <ScoreProvider>
+                <Router>
+                    <Routes>
+                        <Route path="/" element={<MainPage />} />
+                        <Route path="/quiz" element={<QuizPage />} />
+                        <Route path="/score" element={<ScorePage />} />
+                    </Routes>
+                </Router>
+            </ScoreProvider>
+        </StartProvider>
     )
 }
 
 export default App;
 
-// TODO: Context
-// TODO: Pages
 // TODO: Make main code more optimized
 // TODO: Question Into Romanian
 // TODO: CSS (Responsive)
