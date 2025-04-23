@@ -5,16 +5,18 @@ import questionData from "@data/questions.json";
 import QuestionCard from "@components/QuestionCard/index.js";
 import {useStartContext} from "@context/StartContext.jsx";
 import {useScoreContext} from "@context/ScoreContext.jsx";
+import {useThemeContext} from "@context/ThemeContext.jsx";
+import ThemeSwitcher from "@components/ThemeSwitcher/index.js";
 
 function QuizPage() {
     const {name, order, timeLimit} = useStartContext();
     const {highScores, score, updateHistory, updateHighScore, updateScore} = useScoreContext();
+    const { theme, toggleTheme } = useThemeContext();
 
     const [questionList, setQuestionList] = useState([]);
     const [currentQuestion, setCurrentQuestion] = useState(null);
     const [round, setRound] = useState(1);
     const [timeLeft, setTimeLeft] = useState(null);
-    const [localHistory, setLocalHistory] = useState([]);
 
     const navigate = useNavigate();
 
@@ -62,7 +64,7 @@ function QuizPage() {
         const userAnswer = selectedAnswer || 'Unspecified';
         const isCorrect = userAnswer === currentQuestion.correct;
 
-        setLocalHistory((prev) => [
+        updateHistory((prev) => [ // problem
             ...prev,
             {
                 question: currentQuestion.question,
@@ -85,16 +87,21 @@ function QuizPage() {
                 const updatedScores = [...highScores, newScore];
                 localStorage.setItem('quizHighScores', JSON.stringify(updatedScores));
                 updateHighScore(updatedScores);
-                updateHistory(localHistory);
                 navigate('/score');
             }
         }, 1000);
     };
 
     return (
-        <div>
+        <div className={styles.quizPage}>
+            <ThemeSwitcher theme={theme} onClick={toggleTheme} />
+
             <h2>Round {round}/10</h2>
-            {timeLimit !== 'unlimited' && <p>Time Left: {timeLeft}s</p>}
+
+            {timeLimit !== 'unlimited' &&
+                <p>Time Left: {timeLeft}s</p>
+            }
+
             {currentQuestion && (
                 <QuestionCard
                     question={currentQuestion.question}

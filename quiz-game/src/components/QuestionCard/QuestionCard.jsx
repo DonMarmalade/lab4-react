@@ -1,8 +1,8 @@
-import React from 'react';
+import styles from './QuestionCard.module.css';
 
 function QuestionCard({question, answers, onAnswerClick}) {
     return (
-        <div>
+        <div className={styles.question}>
             <h3>{question}</h3>
             <div>
                 {answers.map((answer, index) => (

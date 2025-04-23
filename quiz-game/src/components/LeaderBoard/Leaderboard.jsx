@@ -1,11 +1,11 @@
-import React from 'react';
+import styles from  './Leaderboard.module.css'
 
 function Leaderboard({ highScores }) {
     const sorted = [...highScores].sort((a, b) => b.score - a.score).slice(0, 10);
 
     return (
-        <div className="leaderboard">
-            <h3>🏆 Leaderboard</h3>
+        <div className={styles.leaderboard}>
+            <h3>Leaderboard</h3>
             <table>
                 <thead>
                 <tr>

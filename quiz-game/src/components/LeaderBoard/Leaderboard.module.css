@@ -1,0 +1,50 @@
+.leaderboard {
+    margin-top: 2rem;
+    border-top: 1px solid var(--divider);
+    padding-top: 1rem;
+
+    h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 0.5rem;
+        border-bottom: 1px solid var(--divider);
+    }
+
+    tr:nth-child(even) {
+        background-color: var(--background-color);
+    }
+
+    @media (max-width: 600px) {
+        table, thead, tbody, th, td, tr {
+            display: block;
+        }
+
+        tr {
+            margin-bottom: 1rem;
+        }
+
+        td {
+            padding: 0.5rem 0;
+            text-align: left;
+            position: relative;
+        }
+
+        td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            text-align: left;
+        }
+    }
+
+}
