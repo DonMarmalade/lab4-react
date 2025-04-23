@@ -89,7 +89,7 @@
 
 .quizPage {
     padding: 2rem;
-    max-width: 900px;
+    max-width: 600px;
     margin: 0 auto;
     text-align: center;
 
@@ -101,6 +101,45 @@
     p {
         font-size: 1rem;
         margin-bottom: 1.5rem;
+    }
+
+    .questionMeta {
+        display: flex;
+        margin-bottom: 1rem;
+        gap: 1rem;
+        justify-content: center;
+        flex-flow: wrap row;
+        padding: 0 2rem;
+
+        .categoryBadge {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .difficultyBadge {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .easy {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .medium {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .hard {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
     }
 }
 

@@ -98,6 +98,26 @@ function QuizPage() {
 
             <h2>Round {round}/10</h2>
 
+            {currentQuestion &&
+                <div className={styles.questionMeta}>
+                    <div className={styles.categoryBadge}>
+                        Category: {currentQuestion.category}
+                    </div>
+
+                    <div
+                        className={`${styles.difficultyBadge} ${
+                            currentQuestion.difficulty === 'Easy'
+                                ? styles.easy
+                                : currentQuestion.difficulty === 'Medium'
+                                    ? styles.medium
+                                    : styles.hard
+                        }`}
+                    >
+                        Difficulty: {currentQuestion.difficulty}
+                    </div>
+                </div>
+            }
+
             {timeLimit !== 'unlimited' &&
                 <p>Time Left: {timeLeft}s</p>
             }
