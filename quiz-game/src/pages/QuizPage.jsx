@@ -89,7 +89,7 @@ function QuizPage() {
                 updateHighScore(updatedScores);
                 navigate('/score');
             }
-        }, 1000);
+        }, 500);
     };
 
     return (
