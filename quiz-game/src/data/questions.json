@@ -1,0 +1,85 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "category": "math",
+      "difficulty": "easy",
+      "question": "What is 2 + 2?",
+      "correct": "4",
+      "answers": ["3", "4", "5", "6"]
+    },
+    {
+      "id": 2,
+      "category": "geography",
+      "difficulty": "easy",
+      "question": "What is the capital of France?",
+      "correct": "Paris",
+      "answers": ["Paris", "Berlin", "Madrid", "Rome"]
+    },
+    {
+      "id": 3,
+      "category": "history",
+      "difficulty": "easy",
+      "question": "Who was the first president of the USA?",
+      "correct": "George Washington",
+      "answers": ["George Washington", "Abraham Lincoln", "Thomas Jefferson", "John Adams"]
+    },
+    {
+      "id": 4,
+      "category": "movies",
+      "difficulty": "easy",
+      "question": "Which movie features a talking snowman named Olaf?",
+      "correct": "Frozen",
+      "answers": ["Frozen", "Shrek", "Toy Story", "Moana"]
+    },
+    {
+      "id": 5,
+      "category": "math",
+      "difficulty": "medium",
+      "question": "What is the square root of 64?",
+      "correct": "8",
+      "answers": ["6", "7", "8", "9"]
+    },
+    {
+      "id": 6,
+      "category": "geography",
+      "difficulty": "medium",
+      "question": "Which country has the most natural lakes?",
+      "correct": "Canada",
+      "answers": ["USA", "Russia", "Brazil", "Canada"]
+    },
+    {
+      "id": 7,
+      "category": "history",
+      "difficulty": "medium",
+      "question": "What year did World War II end?",
+      "correct": "1945",
+      "answers": ["1945", "1939", "1918", "1950"]
+    },
+    {
+      "id": 8,
+      "category": "movies",
+      "difficulty": "medium",
+      "question": "Who directed the movie 'Inception'?",
+      "correct": "Christopher Nolan",
+      "answers": ["Christopher Nolan", "Steven Spielberg", "James Cameron", "Ridley Scott"]
+    },
+    {
+      "id": 9,
+      "category": "math",
+      "difficulty": "hard",
+      "question": "What is the derivative of x²?",
+      "correct": "2x",
+      "answers": ["x", "2x", "x²", "1"]
+    },
+    {
+      "id": 10,
+      "category": "history",
+      "difficulty": "hard",
+      "question": "In what year was the Declaration of Independence signed?",
+      "correct": "1776",
+      "answers": ["1776", "1789", "1492", "1812"]
+    }
+  ]
+}
+
