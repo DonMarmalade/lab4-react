@@ -57,7 +57,7 @@ function MainPage() {
                         onChange={(e) => updateOrder(e.target.value)}
                     >
                         <option value="random">Random</option>
-                        <option value="fixed">In JSON Order</option>
+                        <option value="fixed">Ordered</option>
                     </select>
                 </div>
 
